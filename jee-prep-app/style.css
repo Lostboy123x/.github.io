@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timer {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.swiper-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.questions-container {
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.question {
+    min-height: 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+.question h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.options {
+    margin-top: 15px;
+}
+
+.option {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.option.selected {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
+}
+
+#pause-btn {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.results {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.result-item.correct {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+.result-item.incorrect {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+.explanation {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.swipe-indicator {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.questions-container::-webkit-scrollbar {
+    display: none;
+}
+
+.questions-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* Add these new styles to your existing CSS */
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.start-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+.settings {
+    margin: 30px 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.setting-group {
+    margin: 15px 0;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.setting-group select, 
+.setting-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#start-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.level-display {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.results-container {
+    padding: 20px;
+}
+
+.results-content {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.restart-options {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.restart-options button {
+    padding: 12px 25px;
+}
+
+#restart-same-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+#restart-new-btn {
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Difficulty level indicators */
+.level-easy {
+    color: #4CAF50;
+}
+
+.level-medium {
+    color: #FFC107;
+}
+
+.level-hard {
+    color: #F44336;
+}

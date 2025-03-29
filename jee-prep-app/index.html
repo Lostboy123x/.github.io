@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Start Screen -->
+        <div class="start-screen" id="start-screen">
+            <h1>Quiz Master</h1>
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="level-select">Difficulty:</label>
+                    <select id="level-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="timer-input">Time per question (seconds):</label>
+                    <input type="number" id="timer-input" min="5" max="120" value="30">
+                </div>
+            </div>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Container (hidden initially) -->
+        <div class="quiz-container" id="quiz-container" style="display:none">
+            <div class="header">
+                <div class="level-display" id="level-display"></div>
+                <div class="timer">
+                    Time: <span id="time">00:00</span>
+                    <button id="pause-btn">Pause</button>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <p class="swipe-indicator">Scroll down or drag to navigate questions</p>
+            
+            <div class="swiper-container">
+                <div class="questions-container" id="questions-container"></div>
+            </div>
+            
+            <div class="controls">
+                <button id="submit-btn">Finish Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Screen (hidden initially) -->
+        <div class="results-container" id="results-container" style="display:none">
+            <div class="results-content" id="results-content"></div>
+            <div class="restart-options">
+                <button id="restart-same-btn">Try Again</button>
+                <button id="restart-new-btn">New Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
